@@ -1,6 +1,10 @@
 <p align="center">
-<a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo"></a>
-<a href="https://elm-lang.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo"></a>
+  <a href="https://vuejs.org" target="_blank" rel="noopener noreferrer">
+    <img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo">
+  </a>
+  <a href="https://elm-lang.org" target="_blank" rel="noopener noreferrer">
+    <img width="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Elm_logo.svg/1024px-Elm_logo.svg.png" alt="Vue logo">
+  </a>
 </p>
 
 # vue-elm-components

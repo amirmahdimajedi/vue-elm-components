@@ -1,0 +1,43 @@
+{
+  "name": "vue-elm-components",
+  "version": "0.0.1",
+  "description": "Simply embed elm apps as components into your vue applications",
+  "main": "dist/build.js",
+  "scripts": {
+    "dev": "echo \"no dev script!\" && exit 1",
+    "build": "npm run build:es",
+    "build:umd": "cross-env rollup -c -f umd",
+    "build:es": "cross-env rollup -c -f es"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirmahdimajedi/vue-elm-components.git"
+  },
+  "keywords": [
+    "vue",
+    "elm",
+    "vuejs",
+    "ports",
+    "flags"
+  ],
+  "author": "amirmahdimajedi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amirmahdimajedi/vue-elm-components/issues"
+  },
+  "homepage": "https://github.com/amirmahdimajedi/vue-elm-components#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.11",
+    "buble": "^0.20.0",
+    "cross-env": "^7.0.3",
+    "rollup": "^2.50.4",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-elm": "^3.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-vue": "^6.0.0"
+  }
+}

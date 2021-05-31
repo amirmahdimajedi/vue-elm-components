@@ -84,7 +84,7 @@ These flags will be given to the Elm program, allowing you to do some setup work
 
 ### JavaScript/Elm Interop
 
-As your Elm program gets fancier, you will probably need to interact with JavaScript. We do this with [**ports**](http://guide.elm-lang.org/interop/javascript.html). Think of these as holes in the side of an Elm program that let you pass messages back-and-forth.
+As your Elm program gets fancier, you will probably need to interact with JavaScript. We do this with **ports**. Think of these as holes in the side of an Elm program that let you pass messages back-and-forth.
 
 So maybe we extend our app to allow outsiders to the counter through the `counter` port. And maybe we also expose the current count so that the outsider can subscribe to it using the `countChanged` port. You would set it up like this:
 

@@ -4,7 +4,7 @@
       height="80"
       style="padding:10px"
       alt="Vue logo"
-      src="https://raw.githubusercontent.com/amirmahdimajedi/vue-elm-components/master/assets/logos/vue.svg"
+      src="assets/logos/vue.svg"
     >
   </a>
   <a target="_blank" href="https://elm-lang.org">
@@ -12,7 +12,7 @@
       height="80"
       style="padding:10px"
       alt="Elm logo"
-      src="https://raw.githubusercontent.com/amirmahdimajedi/vue-elm-components/master/assets/logos/elm.svg"
+      src="assets/logos/elm.svg"
     >
   </a>
 </p>
@@ -90,7 +90,7 @@ These flags will be given to the Elm program, allowing you to do some setup work
 
 As your Elm program gets fancier, you will probably need to interact with JavaScript. We do this with **ports**. Think of these as holes in the side of an Elm program that let you pass messages back-and-forth.
 
-So maybe we extend our app to allow outsiders to the counter through the `counter` port. And maybe we also expose the current count so that the outsider can subscribe to it using the `countChanged` port. You would set it up like this:
+So let's say we want to extend our app to allow outsiders to modify the counter through the `counter` port. And maybe we also expose the current count so that outsiders can subscribe to it using the `countChanged` port. You would set it up like this:
 
 ```html
 <template>

@@ -27,7 +27,7 @@ Companies that use [Elm](http://elm-lang.org/) in production usually start small
 
 ## Current stage of development <prototype>
 
-### Immediate goal: MVP version
+### Immediate goal: Add demos for Elm 0.18 and 0.19
 
 ## Usage
 

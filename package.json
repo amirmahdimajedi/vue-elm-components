@@ -5,7 +5,7 @@
   "main": "dist/lib.js",
   "scripts": {
     "dev": "echo \"no dev script!\" && exit 1",
-    "test": "echo \"no tests!\" && exit 0",
+    "test": "echo \"no tests yet!\" && exit 0",
     "build": "cross-env rollup -c",
     "build:umd": "cross-env rollup -c -f umd",
     "build:es": "cross-env rollup -c -f es"

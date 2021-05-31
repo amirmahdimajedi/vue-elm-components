@@ -1,20 +1,24 @@
 import vue from 'rollup-plugin-vue'
-import buble from 'rollup-plugin-buble'
-import nodeResolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
-import elm from 'rollup-plugin-elm'
+import buble from '@rollup/plugin-buble'
+import commonjs from '@rollup/plugin-commonjs'
+import nodeResolve from '@rollup/plugin-node-resolve'
+import babel from '@rollup/plugin-babel'
+import { uglify } from 'rollup-plugin-uglify'
 
 export default {
   input: 'src/elm.vue',
   output: [
     {
-      file: 'dist/vue-elm-components.min.js',
-      name: 'vue-elm-components.min.js',
-      format: 'umd'
+      file: 'dist/vue-elm-components.js',
+      name: 'vue-elm-components',
+      format: 'umd',
+      sourcemap: true
     },
     {
-      file: 'dist/build.js',
-      format: 'es'
+      file: 'dist/lib.js',
+      name: 'lib',
+      format: 'es',
+      sourcemap: true
     }
   ],
   plugins: [
@@ -34,10 +38,10 @@ export default {
       browser: true
     }),
     commonjs(),
-    elm({
-      include: /\.elm$/,
-      target: 'browser',
-      exclude: [/elm-stuff/, /node_modules/]
-    })
+    babel({
+      exclude: 'node_modules/**',
+      babelHelpers: 'bundled',
+    }),
+    uglify(),
   ]
 };

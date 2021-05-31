@@ -12,13 +12,13 @@ export default {
   },
   mounted() {
 
-    const {
-      $el,
-      $refs: { placeholder },
-      ports,
-      flags,
-      src,
-    } = this
+    const
+      { $el
+      , $refs: { placeholder }
+      , ports
+      , flags
+      , src
+      } = this
 
     const main = src && src.Main
 

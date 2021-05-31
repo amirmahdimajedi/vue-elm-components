@@ -1,9 +1,9 @@
 <script>
 export default {
   props: {
-    ports: { type: Object , required: false },
-    flags: { type: Object , required: false },
-    src:   { type: Object , required: true  },
+    src:   { type: Object   , required: true  },
+    ports: { type: Function , required: false },
+    flags: { type: Object   , required: false , default: {} },
   },
   render(h) {
     return (<div>
@@ -44,7 +44,7 @@ export default {
 
       app = main.init({
         node: placeholder,
-        flags: flags
+        flags
       });
 
     }

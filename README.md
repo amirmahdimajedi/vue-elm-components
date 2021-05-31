@@ -74,7 +74,7 @@ export default {
     Counter,
     flags: { start: 5 }
   },
-	components: { VElm }
+  components: { VElm }
 }
 </script>
 ```
@@ -116,7 +116,7 @@ export default {
       ports.counter.send(1);
     }
   },
-	components: { VElm }
+  components: { VElm }
 }
 </script>
 ```
@@ -133,8 +133,8 @@ Once the Elm component is initialized, changing the `flags` and `ports` properti
 export default {
   Counter: {
     Main: {
-      embed: [[Function]] // version 0.18 and prior
-      init:  [[Function]] // since version 0.19
+      embed: [[Function]], // version 0.18 and prior
+      init:  [[Function]], // since version 0.19
     }
   }
 }

@@ -23,11 +23,15 @@
 
 This package makes it easy to turn Elm code into Vue.js components.
 
-Companies that use [Elm](http://elm-lang.org/) in production usually start small. Read more about how to use Elm at work [here](http://elm-lang.org/blog/how-to-use-elm-at-work).
+Companies that use Elm in production usually start small. Read more about how to use Elm at work [here](http://elm-lang.org/blog/how-to-use-elm-at-work).
 
-## Current stage of development <prototype>
+## Development Status <prototype>
 
-### Immediate goal: Add demos for Elm 0.18 and 0.19
+- **Immediate Goals**
+  - Add demos for Elm 0.18 and 0.19
+  - Add automated tests
+- **Coming Soon**
+  - Interact with Elm ports using Vue.js props and events
 
 ## Usage
 
@@ -152,7 +156,7 @@ var app = App.embed(node, flags);
 setupPorts(app.ports)
 ```
 
-So if you are interested in embedding Elm in something else, do the same trick! You can get more complete docs on embedding Elm in JS [here](https://guide.elm-lang.org/interop/) Let the community know if you make something!
+So if you are interested in embedding Elm in something else, do the same trick! You can get more complete docs on embedding Elm in JS [here](https://guide.elm-lang.org/interop/). Let the community know if you make something!
 
 
 ---

@@ -104,7 +104,6 @@ import { Counter } from '@/path/to/file/Counter.elm'
 export default {
   data: {
     Counter,
-    flags: { start: 5 },
     currentCount: 0,
   },
   methods: {

@@ -20,7 +20,7 @@ export default {
       src,
     } = this
 
-    const main = src && src.Elm && src.Elm.Main
+    const main = src && src.Main
 
     let app;
 

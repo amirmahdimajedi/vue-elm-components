@@ -5,7 +5,8 @@
   "main": "dist/build.js",
   "scripts": {
     "dev": "echo \"no dev script!\" && exit 1",
-    "build": "npm run build:es",
+    "test": "echo \"no tests!\" && exit 0",
+    "build": "npm run build:es && npm run build:umd",
     "build:umd": "cross-env rollup -c -f umd",
     "build:es": "cross-env rollup -c -f es"
   },
@@ -14,7 +15,7 @@
     "url": "https://github.com/amirmahdimajedi/vue-elm-components.git"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry":"https://npm.pkg.github.com/"
   },
   "keywords": [
     "vue",

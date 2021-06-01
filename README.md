@@ -35,6 +35,12 @@ Companies that use Elm in production usually start small. Read more about how to
 
 ## Usage
 
+### Installation
+
+```shell
+npm i vue-elm-components
+```
+
 ### Basic Usage
 
 If you have an Elm app, you can import it using the [elm-webpack-loader](https://github.com/elm-community/elm-webpack-loader) and embed it in your Vue code like this:

@@ -1,6 +1,6 @@
 {
   "name": "vue-elm-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simply embed elm apps as components into your vue applications",
   "main": "dist/lib.js",
   "scripts": {

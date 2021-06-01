@@ -10,7 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/amirmahdimajedi/vue-elm-components.git"
+    "url": "git://github.com/amirmahdimajedi/vue-elm-components.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "vue",

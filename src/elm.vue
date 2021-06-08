@@ -5,45 +5,31 @@ export default {
     ports: { type: Function , required: false },
     flags: { type: Object   , required: false , default: {} },
   },
-  render(h) {
-    return (<div>
-      <div ref="placeholder"></div>
-    </div>)
-  },
+  render: (h) => (<div></div>),
   mounted() {
 
     const {
       $el,
-      $refs: { placeholder },
       ports,
       flags,
       src
     } = this
 
-    const main = src && src.Main
-
     let app;
 
-    if (main.embed) {
+    if (src.embed) {
 
       /* Elm 0.18 */
 
-      app = main.embed($el, flags);
+      app = src.embed($el, flags);
 
     }
-    else if (main.init) {
+    else if (src.init) {
 
       /* Elm 0.19 */
 
-      /*
-      ** Note that Elm 0.19 doesn't treat `node` as a container, but rather as a placeholder.
-      ** The Elm App will replace the provided node, rather than mount itself within the provided node.
-      ** This can cause runtime errors when unmounting this Vue component.
-      ** The workaround is to use an extra <div>, which the virtual DOM doesn't directly control, and allow Elm to replace that node.
-      */
-
-      app = main.init({
-        node: placeholder,
+      app = src.init({
+        node: $el,
         flags
       });
 

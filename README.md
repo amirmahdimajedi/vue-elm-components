@@ -37,7 +37,7 @@ Companies that use Elm in production usually start small. Read more about how to
 
 ### Installation
 
-```shell
+```**shell**
 npm i vue-elm-components
 ```
 
@@ -53,7 +53,7 @@ If you have an Elm app, you can import it using the [elm-webpack-loader](https:/
 <script>
 import VElm from 'vue-elm-components'
 
-import { Counter } from '@/path/to/file/Counter.elm'
+import Counter from '@/path/to/file/Counter.elm'
 
 export default {
   data: { Counter },
@@ -77,7 +77,7 @@ Sometimes you want to give your Elm program some **flags** on start up. Let's sa
 <script>
 import VElm from 'vue-elm-components'
 
-import { Counter } from '@/path/to/file/Counter.elm'
+import Counter from '@/path/to/file/Counter.elm'
 
 export default {
   data: {
@@ -109,7 +109,7 @@ So let's say we want to extend our app to allow outsiders to modify the counter 
 <script>
 import VElm from 'vue-elm-components'
 
-import { Counter } from '@/path/to/file/Counter.elm'
+import Counter from '@/path/to/file/Counter.elm'
 
 export default {
   data: {
@@ -140,7 +140,7 @@ Once the Elm component is initialized, changing the `flags` and `ports` properti
   4. The default export from an Elm module (`.elm` or compiled to `.js`) is an object which contains your app as a property. For example, you can imagine that a file named `Counter.elm`, or its compiled counterpart named `dist/counter.js` will export something like this:
 ```javascript
 export default {
-  Counter: {
+  Elm: {
     Main: {
       embed: [[Function]], // version 0.18 and prior
       init:  [[Function]], // since version 0.19
@@ -157,8 +157,8 @@ If you want to embed Elm in something else, you are in luck!
 [The implementation](src/elm.vue) is pretty short, mostly Vue-related. The important lines are basically running the following program at the correct time:
 
 ```javascript
-import { App } from "@/path/to/file/App.elm";
-var app = App.embed(node, flags);
+import App from "@/path/to/file/App.elm";
+var app = App.Elm.Main.embed(node, flags);
 setupPorts(app.ports)
 ```
 

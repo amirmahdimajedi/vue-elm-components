@@ -15,20 +15,22 @@ export default {
       src
     } = this
 
+    let main = src && src.Elm && src.Elm.Main
+
     let app;
 
-    if (src.embed) {
+    if (main.embed) {
 
       /* Elm 0.18 */
 
-      app = src.embed($el, flags);
+      app = main.embed($el, flags);
 
     }
-    else if (src.init) {
+    else if (main.init) {
 
       /* Elm 0.19 */
 
-      app = src.init({
+      app = main.init({
         node: $el,
         flags
       });
